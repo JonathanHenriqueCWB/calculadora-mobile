@@ -3,6 +3,7 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
 import Button from './components/Button'
+import Display from './components/Display'
 
 
 export default function App() {
@@ -14,6 +15,8 @@ export default function App() {
         <StatusBar style="auto" />
       */}
 
+      <Display value={0}/>
+      
       <View style={styles.buttons}>
         <Button label='AC' />
         <Button label='/' />
