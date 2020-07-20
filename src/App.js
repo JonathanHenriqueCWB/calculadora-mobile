@@ -29,21 +29,29 @@ export default class App extends Component {
         <Display value={this.state.displayValue}/>
         <View style={styles.buttons}>
           <Button nomeBtn='AC' triple onClick={this.clearMemory}/>
-          <Button nomeBtn='/'  operation/>
-          <Button nomeBtn='7' />
-          <Button nomeBtn='8' />
-          <Button nomeBtn='9' />
-          <Button nomeBtn='*' operation/>
-          <Button nomeBtn='4' />
-          <Button nomeBtn='5' />
-          <Button nomeBtn='6' />
-          <Button nomeBtn='-' operation/>
-          <Button nomeBtn='1' />
-          <Button nomeBtn='2' />
-          <Button nomeBtn='3' />
-          <Button nomeBtn='+' operation/>
-          <Button nomeBtn='0' />
-          <Button nomeBtn='.' double />
+          <Button nomeBtn='/'  operation onClick={this.setOperation}/>
+          
+          <Button nomeBtn='7' onClick={this.addDigito}/>
+          <Button nomeBtn='8' onClick={this.addDigito}/>
+          <Button nomeBtn='9' onClick={this.addDigito}/>
+
+          <Button nomeBtn='*' operation onClick={this.setOperation}/>
+          
+          <Button nomeBtn='4' onClick={this.addDigito}/>
+          <Button nomeBtn='5' onClick={this.addDigito}/>
+          <Button nomeBtn='6' onClick={this.addDigito}/>
+          
+          <Button nomeBtn='-' operation onClick={this.setOperation}/>
+
+          <Button nomeBtn='1' onClick={this.addDigito}/>
+          <Button nomeBtn='2' onClick={this.addDigito}/>
+          <Button nomeBtn='3' onClick={this.addDigito}/>
+          
+          <Button nomeBtn='+' operation onClick={this.setOperation}/>
+          
+          <Button nomeBtn='0' onClick={this.addDigito}/>
+          
+          <Button nomeBtn='.' double onClick={this.setOperation}/>
           <Button nomeBtn='=' operation />
         </View>  
       </View>

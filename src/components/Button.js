@@ -13,7 +13,7 @@ export default props =>{
     if(props.operation) stylesButton.push(estilo.operationButton)
 
     return(
-        <TouchableHighlight onPress={props.onClick}>
+        <TouchableHighlight onPress={() => props.onClick(props.nomeBtn)}>
             <Text style={stylesButton}>{props.nomeBtn}</Text>
         </TouchableHighlight>
     )
